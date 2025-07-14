@@ -35,16 +35,3 @@ Output: 1
 Input: -3
 Output: Error: factorial is undefined for negative numbers.
 ```
-
-## 🚀 Bonus (Optional)
-
-- Add user input handling via `cin`
-- Wrap both implementations in separate functions
-- Measure time difference between recursive and iterative solutions
-- Write test cases using assert or a small test driver
-
-## 🗂️ Files
-
-- `main.cpp` – Contains your implementation
-- `README.md` – This file
-- `notes.md` – (Optional) Personal notes or reflection
