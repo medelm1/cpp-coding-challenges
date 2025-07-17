@@ -6,7 +6,6 @@
 
 std::pair<std::vector<int>, int> syntheticDivision(std::vector<int>, int);
 std::string polynomialToString(std::vector<int>);
-std::string coefficientsToString(std::vector<int>);
 
 int main()
 {
