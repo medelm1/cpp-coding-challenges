@@ -1,26 +1,7 @@
 #include <iostream>
 
-int factorialRecursive(int n)
-{
-    if (n == 1)
-    {
-        return 1;
-    }
-
-    return n * factorialRecursive(n-1);
-}
-
-int factorialIterative(int n)
-{
-    int i, prod;
-
-    for (i = n, prod = 1; i >= 1; i--)
-    {
-        prod *= i;
-    }
-
-    return prod;
-}
+int factorialRecursive(int n);
+int factorialIterative(int n);
 
 int main()
 {
@@ -41,4 +22,26 @@ int main()
     std::cout << factorialIterative(npt) << std::endl;
 
     return 0;
+}
+
+int factorialRecursive(int n)
+{
+    if (n == 1)
+    {
+        return 1;
+    }
+
+    return n * factorialRecursive(n-1);
+}
+
+int factorialIterative(int n)
+{
+    int i, prod;
+
+    for (i = n, prod = 1; i >= 1; i--)
+    {
+        prod *= i;
+    }
+
+    return prod;
 }
