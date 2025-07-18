@@ -6,8 +6,13 @@ int main(void)
 {
     int n;
 
-    std::cin >> n;
+    // Validation
+    do {
+        std::cin >> n;
+    }
+    while (n < 0);
 
+    // Check the number and print the result
     if (isPalindrome(n))
     {
         std::cout << "Palindrome" << std::endl;
