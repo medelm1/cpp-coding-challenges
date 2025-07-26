@@ -4,25 +4,67 @@ int secondLarget(const int[], int);
 
 int main(void)
 {
-    // int n = 5;
-    // int arr[n] = {1, 3, 7, 6, 9};
+    // Eneter size
+    int n, i, isIdentical;
+    do
+    {
+        std::cout << "Enter size: "; std::cin >> n;
+    }
+    while (n < 1 || n > 100);
 
-    // std::cout << secondLarget(arr, n) << std::endl;
+    // Insert elements
+    int arr[n];
+    for (i = 0; i < n; i++)
+    {
+        std::cout << "Enter " << i << "-th element: "; std::cin >> arr[i];
+    }
+
+    // check size and process elements
+    if (n == 1)
+    {
+        std::cout << "No second largest element";
+    }
+    else if (n == 2)
+    {
+        if (arr[0] > arr[1]) std::cout << "Second largest element: " << arr[1];
+        else if (arr[0] < arr[1]) std::cout << "Second largest element: " << arr[0];
+        else std::cout << "No second largest element";
+    }
+    else
+    {
+        // check if all the elements are identical
+        for (i = 0, isIdentical = true; i < n-1; i++)
+        {
+            if (arr[i] != arr[i+1])
+            {
+                isIdentical = false;
+                break;
+            }
+        }
+
+        if (isIdentical)
+        {
+            std::cout << "No second largest element";
+        }
+        else
+        {
+            std::cout << "Second largest element: " << secondLarget(arr, n);
+        }
+    }
 }
 
 int secondLarget(const int arr[], int n)
 {
-    // int largest, secondLargest, iter;
+    int largest, secondLargest, i;
 
-    // for (iter = 1, largest = arr[0]; iter < n; iter++)
-    // {
-    //     if (arr[iter] > largest)
-    //     {
-    //         largest = arr[iter];
-    //     }
-    // }
+    for (i = 1, largest = arr[0]; i < n; i++)
+    {
+        if (largest < arr[i])
+        {
+            secondLargest = largest;
+            largest = arr[i];
+        }
+    }
 
-    // secondLargest = (largest != arr[0]) ? arr[0] : 
-
-    // for (iter = 1, secondLargest = arr[0], )
+    return secondLargest;
 }
